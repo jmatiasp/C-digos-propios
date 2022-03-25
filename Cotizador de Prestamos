@@ -1,0 +1,19 @@
+<h6>Cantidad Solicitada </h6><input type="number" id="myInput" max="100000" min="3000" value="3000" oninput="Cantcuotas()">
+<p></p>
+<h6 id="demo"></h6>
+
+<h6>Cantidad de Cuotas </h6><input type="number" id="cuotas" max="18" min="6" value="6" oninput="Cantcuotas()">
+<p></p>
+<h6 id="pesadas"></h6>
+
+<script>
+function Cantcuotas(){
+  var x = document.getElementById("myInput").value*1.1;
+  var mcuotas = document.getElementById("cuotas").value*0.08+1;
+  var cuotass = document.getElementById("cuotas").value;
+  var valoragregado = 500;
+  var final = x*mcuotas/cuotass+500;
+  document.getElementById("pesadas").innerHTML = "Valor de la Cuota $ " + final.toFixed(0);
+}
+
+</script>
